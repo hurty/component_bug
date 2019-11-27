@@ -1,0 +1,7 @@
+<h1>Messages</h1>
+
+<%= for message <- @messages do %>
+<%= if true do %>
+  <%= live_component @socket, ComponentBugWeb.MessageComponent, id: message.id, message: message %>
+<% end %>
+<% end %>
