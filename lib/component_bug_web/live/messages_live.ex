@@ -6,7 +6,7 @@ defmodule ComponentBugWeb.MessagesLive do
     <h1>Messages</h1>
 
     <%= for message <- @messages do %>
-      <%= if true do %>
+      <%= if message.id do %>
         <%= live_component @socket, ComponentBugWeb.MessageComponent, id: message.id, message: message %>
       <% end %>
     <% end %>
